@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		647709881A832FBC000EE14E /* FeelingAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647709871A832FBC000EE14E /* FeelingAbout.swift */; };
 		6477098B1A847A86000EE14E /* FeelingAboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6477098A1A847A86000EE14E /* FeelingAboutCell.swift */; };
+		647709BF1A86C269000EE14E /* HorizontalSnapFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 647709BE1A86C269000EE14E /* HorizontalSnapFlowLayout.m */; };
 		64F96A001A8321A50082A8A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F969FF1A8321A50082A8A9 /* AppDelegate.swift */; };
 		64F96A021A8321A50082A8A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F96A011A8321A50082A8A9 /* ViewController.swift */; };
 		64F96A051A8321A50082A8A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64F96A031A8321A50082A8A9 /* Main.storyboard */; };
@@ -29,9 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		647709851A83269E000EE14E /* feelAbout-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "feelAbout-Bridging-Header.h"; sourceTree = "<group>"; };
 		647709871A832FBC000EE14E /* FeelingAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelingAbout.swift; path = model/FeelingAbout.swift; sourceTree = "<group>"; };
 		6477098A1A847A86000EE14E /* FeelingAboutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelingAboutCell.swift; path = view/FeelingAboutCell.swift; sourceTree = "<group>"; };
+		647709BC1A86C269000EE14E /* feelAbout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "feelAbout-Bridging-Header.h"; sourceTree = "<group>"; };
+		647709BD1A86C269000EE14E /* HorizontalSnapFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizontalSnapFlowLayout.h; path = view/HorizontalSnapFlowLayout.h; sourceTree = "<group>"; };
+		647709BE1A86C269000EE14E /* HorizontalSnapFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizontalSnapFlowLayout.m; path = view/HorizontalSnapFlowLayout.m; sourceTree = "<group>"; };
 		64F969FA1A8321A50082A8A9 /* feelAbout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feelAbout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F969FE1A8321A50082A8A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64F969FF1A8321A50082A8A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				6477098A1A847A86000EE14E /* FeelingAboutCell.swift */,
+				647709BD1A86C269000EE14E /* HorizontalSnapFlowLayout.h */,
+				647709BE1A86C269000EE14E /* HorizontalSnapFlowLayout.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		64F969FC1A8321A50082A8A9 /* feelAbout */ = {
 			isa = PBXGroup;
 			children = (
+				647709BC1A86C269000EE14E /* feelAbout-Bridging-Header.h */,
 				647709891A847A45000EE14E /* view */,
 				647709861A832F96000EE14E /* model */,
 				64F969FF1A8321A50082A8A9 /* AppDelegate.swift */,
@@ -113,7 +119,6 @@
 				64F96A061A8321A50082A8A9 /* Images.xcassets */,
 				64F96A081A8321A50082A8A9 /* LaunchScreen.xib */,
 				64F969FD1A8321A50082A8A9 /* Supporting Files */,
-				647709851A83269E000EE14E /* feelAbout-Bridging-Header.h */,
 			);
 			path = feelAbout;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			files = (
 				64F96A021A8321A50082A8A9 /* ViewController.swift in Sources */,
 				647709881A832FBC000EE14E /* FeelingAbout.swift in Sources */,
+				647709BF1A86C269000EE14E /* HorizontalSnapFlowLayout.m in Sources */,
 				6477098B1A847A86000EE14E /* FeelingAboutCell.swift in Sources */,
 				64F96A001A8321A50082A8A9 /* AppDelegate.swift in Sources */,
 			);
@@ -424,9 +430,12 @@
 			baseConfigurationReference = 9CBCDC1CD115617747F0F4E3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = feelAbout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "feelAbout/feelAbout-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -435,9 +444,11 @@
 			baseConfigurationReference = A163FA2B25AF343536DCC843 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = feelAbout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "feelAbout/feelAbout-Bridging-Header.h";
 			};
 			name = Release;
 		};

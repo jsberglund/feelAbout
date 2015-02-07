@@ -9,5 +9,5 @@
 #ifndef feelAbout_feelAbout_Bridging_Header_h
 #define feelAbout_feelAbout_Bridging_Header_h
 #import <Parse/Parse.h>
-
+#import "HorizontalSnapFlowLayout.h"
 #endif
