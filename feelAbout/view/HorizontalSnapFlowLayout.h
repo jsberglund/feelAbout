@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HorizontalSnapFlowLayout : UICollectionViewFlowLayout
+@interface HorizontalSnapFlowLayout : UICollectionViewFlowLayout 
 @property ( nonatomic) int previousXoffset;
 
 @end

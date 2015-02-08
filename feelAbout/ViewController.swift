@@ -9,14 +9,15 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate
 {
     @IBOutlet weak var aboutCollectionView: UICollectionView!
     @IBOutlet weak var feelingCollectionView: UICollectionView!
+    var previousXoffset : CGFloat = 0;
     
-    let negativeFeelings = ["","angry","nervous","sad","confused","frustrated", "disappointed","irritated","insecure"]
+    let negativeFeelings = ["","angry","nervous","sad","confused","frustrated", "disappointed","irritated","insecure",""]
     
-    let aboutTopics = ["","career","relationship","friends","finances","education", "health","appearance"]
+    let aboutTopics = ["","career","relationship","friends","finances","education", "health","appearance",""]
 
     
     override func viewDidLoad() {
@@ -96,7 +97,60 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
 
+    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        //
+    }
     
+//    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+//    }
+    
+    
+    //Todo: fix this eventually, it's pretty freaking sucky
+    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        var collectionView : UICollectionView
+        var dataSource : NSArray
+        if (self.feelingCollectionView == scrollView) {
+            collectionView = self.feelingCollectionView
+            dataSource = self.negativeFeelings
+        } else {
+            collectionView = self.aboutCollectionView
+            dataSource = self.negativeFeelings
+        }
+        
+        var point : CGPoint = targetContentOffset.memory;
+        println("taget content offset x: \(point.x)")
+        var layout : UICollectionViewFlowLayout  = collectionView.collectionViewLayout as UICollectionViewFlowLayout;
+        
+        
+        //we want to find the closest item to the expected scroll stop (point.y)...
+        var visibleWidth : CGFloat = collectionView.frame.size.width
+        var itemWidth : CGFloat = layout.minimumInteritemSpacing + layout.itemSize.width;
+        
+        println("collection width: \(visibleWidth) item width: \(itemWidth)")
+        
+        //get index of nearest item we expect to scroll to
+        //expectedLandingPoint / itemWidth
+        //todo: ceil or floor might depend on scroll direction
+        var expectedIndex = ceil((point.x - (itemWidth/2 - visibleWidth) / 2) / itemWidth)
+        if (expectedIndex <= 0) {
+            expectedIndex = 1.0
+            println("setting index to 1")
+        } else if (expectedIndex >= CGFloat(dataSource.count-1)) {
+            expectedIndex--
+            println("decrementing index")
+        }
+        println("Expected Index: \(expectedIndex)")
+        var newTargetX = (itemWidth * expectedIndex) + (itemWidth - visibleWidth)/2
+        println("new target x offset: \(newTargetX)")
+        
+        
+        
+        targetContentOffset.memory = CGPointMake(newTargetX, 0);
+    }
+    
+    
+
 
 
 }
