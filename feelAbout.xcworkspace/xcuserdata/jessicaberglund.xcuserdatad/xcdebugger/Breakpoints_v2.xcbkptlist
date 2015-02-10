@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "feelAbout/ViewController.swift"
-            timestampString = "445068998.420765"
+            timestampString = "445240979.079975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "feelAbout/ViewController.swift"
-            timestampString = "445068998.420765"
+            timestampString = "445240979.079975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
             landmarkType = "5">
          </BreakpointContent>

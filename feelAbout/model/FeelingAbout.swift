@@ -28,5 +28,6 @@ public class FeelingAbout : PFObject, PFSubclassing {
     
     @NSManaged public var feeling : NSString
     @NSManaged public var about : NSString
+    @NSManaged public var longDescription : NSString
     @NSManaged public var byUser : PFUser
 }
