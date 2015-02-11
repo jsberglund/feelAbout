@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Parse
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate
 {
@@ -26,7 +25,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TODO - signin using device ID as unique token/username?
+
+//        TODO - signin using device ID as unique token/username?
         if (PFUser.currentUser() == nil) {
             
             PFAnonymousUtils.logInWithBlock {

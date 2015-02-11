@@ -1,13 +1,6 @@
 //
-//  feelAbout-Bridging-Header.h
-//  feelAbout
-//
-//  Created by Jessica Berglund on 2/4/15.
-//  Copyright (c) 2015 Jessica Berglund. All rights reserved.
+//  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-#ifndef feelAbout_feelAbout_Bridging_Header_h
-#define feelAbout_feelAbout_Bridging_Header_h
+#import <MBProgressHUD/MBProgressHud.h>
 #import <Parse/Parse.h>
-#import "HorizontalSnapFlowLayout.h"
-#endif
