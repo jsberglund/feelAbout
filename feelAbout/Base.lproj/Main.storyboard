@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C99d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -109,47 +109,41 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="IgU-sk-sju"/>
                                         </connections>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTl-78-ILy">
-                                        <rect key="frame" x="0.0" y="464" width="600" height="116"/>
-                                        <color key="backgroundColor" red="0.83137254901960778" green="0.85098039215686272" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="29"/>
-                                        <state key="normal" title="talkAbout it">
-                                            <color key="titleColor" red="0.23137254900000001" green="0.40000000000000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYy-JB-7Yx" userLabel="talkAboutItView">
+                                        <rect key="frame" x="0.0" y="464" width="600" height="580"/>
+                                        <color key="backgroundColor" red="0.792156862745098" green="0.81960784313725488" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <connections>
-                                            <action selector="talkAboutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvE-Vq-eQs"/>
+                                            <outletCollection property="gestureRecognizers" destination="cbC-Z1-fe1" appends="YES" id="wyH-8E-4Nb"/>
                                         </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1yK-f2-O1z" secondAttribute="trailing" id="1zG-HW-zek"/>
-                                    <constraint firstAttribute="bottom" secondItem="WTl-78-ILy" secondAttribute="bottom" id="2yr-Ub-iCJ"/>
                                     <constraint firstItem="1yK-f2-O1z" firstAttribute="top" secondItem="jfx-TX-qIh" secondAttribute="bottom" id="7Cv-SP-QLi"/>
                                     <constraint firstItem="jfx-TX-qIh" firstAttribute="leading" secondItem="zWu-uP-QdA" secondAttribute="leading" id="AkR-Pj-YSc"/>
                                     <constraint firstItem="efp-02-CtW" firstAttribute="top" secondItem="1yK-f2-O1z" secondAttribute="bottom" id="FQF-U2-SEA"/>
                                     <constraint firstItem="efp-02-CtW" firstAttribute="leading" secondItem="zWu-uP-QdA" secondAttribute="leading" id="G1V-oR-37e"/>
+                                    <constraint firstAttribute="height" secondItem="EYy-JB-7Yx" secondAttribute="height" id="IC3-2P-F8d"/>
                                     <constraint firstItem="jfx-TX-qIh" firstAttribute="height" secondItem="zWu-uP-QdA" secondAttribute="height" multiplier="0.2" id="Nnh-SN-Mvr"/>
                                     <constraint firstItem="1yK-f2-O1z" firstAttribute="leading" secondItem="zWu-uP-QdA" secondAttribute="leading" id="Q9I-oO-frb"/>
-                                    <constraint firstItem="WTl-78-ILy" firstAttribute="leading" secondItem="zWu-uP-QdA" secondAttribute="leading" id="TaZ-E5-mA8"/>
                                     <constraint firstItem="efp-02-CtW" firstAttribute="height" secondItem="zWu-uP-QdA" secondAttribute="height" multiplier="0.2" id="UrP-l4-7yg"/>
                                     <constraint firstAttribute="trailing" secondItem="jfx-TX-qIh" secondAttribute="trailing" id="Vn1-kz-3iH"/>
-                                    <constraint firstAttribute="trailing" secondItem="WTl-78-ILy" secondAttribute="trailing" id="W99-FW-q9N"/>
                                     <constraint firstItem="se7-yp-Qvq" firstAttribute="height" secondItem="zWu-uP-QdA" secondAttribute="height" multiplier="0.2" id="XdR-wV-U3l"/>
-                                    <constraint firstItem="1yK-f2-O1z" firstAttribute="bottom" secondItem="efp-02-CtW" secondAttribute="top" multiplier="0.2" id="YnS-NP-hbV"/>
+                                    <constraint firstItem="EYy-JB-7Yx" firstAttribute="leading" secondItem="zWu-uP-QdA" secondAttribute="leading" id="XzP-Zy-4vw"/>
+                                    <constraint firstItem="EYy-JB-7Yx" firstAttribute="top" secondItem="efp-02-CtW" secondAttribute="bottom" id="YRZ-Ah-Hlz"/>
                                     <constraint firstItem="jfx-TX-qIh" firstAttribute="top" secondItem="se7-yp-Qvq" secondAttribute="bottom" id="cQl-fn-94i"/>
                                     <constraint firstItem="efp-02-CtW" firstAttribute="height" secondItem="zWu-uP-QdA" secondAttribute="height" multiplier="0.2" id="cbe-Iu-UXt"/>
                                     <constraint firstAttribute="trailing" secondItem="efp-02-CtW" secondAttribute="trailing" id="e8W-ug-ATZ"/>
                                     <constraint firstItem="se7-yp-Qvq" firstAttribute="leading" secondItem="zWu-uP-QdA" secondAttribute="leading" id="ieD-b7-isL"/>
-                                    <constraint firstItem="WTl-78-ILy" firstAttribute="top" secondItem="efp-02-CtW" secondAttribute="bottom" id="igQ-dj-nsR"/>
                                     <constraint firstItem="1yK-f2-O1z" firstAttribute="height" secondItem="zWu-uP-QdA" secondAttribute="height" multiplier="0.2" id="izg-tg-YCQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="EYy-JB-7Yx" secondAttribute="trailing" id="r2I-x1-N5I"/>
                                     <constraint firstAttribute="trailing" secondItem="se7-yp-Qvq" secondAttribute="trailing" id="sdb-De-Np9"/>
                                     <constraint firstItem="se7-yp-Qvq" firstAttribute="top" secondItem="zWu-uP-QdA" secondAttribute="top" id="tfM-qO-WK0"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="YnS-NP-hbV"/>
                                         <exclude reference="UrP-l4-7yg"/>
                                     </mask>
                                 </variation>
@@ -167,11 +161,16 @@
                         <outlet property="aboutCollectionView" destination="efp-02-CtW" id="h8t-qd-5GV"/>
                         <outlet property="feelingCollectionView" destination="jfx-TX-qIh" id="Dg9-YP-JsC"/>
                         <outlet property="feelingView" destination="zWu-uP-QdA" id="5cF-dI-CA9"/>
-                        <outlet property="talkAboutButton" destination="WTl-78-ILy" id="Z92-cK-qhm"/>
-                        <outlet property="topSpaceTalkButtonConstraint" destination="igQ-dj-nsR" id="LpS-nZ-nYC"/>
+                        <outlet property="taklAboutItView" destination="EYy-JB-7Yx" id="oF4-Al-MrW"/>
+                        <outlet property="topSpaceForTalkButtonConstraint" destination="YRZ-Ah-Hlz" id="Nmx-3D-IBv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cbC-Z1-fe1">
+                    <connections>
+                        <action selector="talkaboutViewTapped:" destination="BYZ-38-t0r" id="5DK-sU-INY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="320" y="282"/>
         </scene>

@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate
 {
+    @IBOutlet weak var taklAboutItView: UIView!
     @IBOutlet weak var feelingView: UIView!
-    @IBOutlet weak var talkAboutButton: UIButton!
-    @IBOutlet weak var topSpaceTalkButtonConstraint: NSLayoutConstraint!
     @IBOutlet weak var aboutCollectionView: UICollectionView!
     @IBOutlet weak var feelingCollectionView: UICollectionView!
+    
+    //constraints
+    @IBOutlet weak var topSpaceForTalkButtonConstraint: NSLayoutConstraint!
+    
+    
+    
+    
+    
     var previousXoffset : CGFloat = 0;
     
     let negativeFeelings = ["","angry","nervous","sad","confused","frustrated", "disappointed","irritated","insecure",""]
@@ -24,6 +31,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
 
 //        TODO - signin using device ID as unique token/username?
@@ -56,22 +65,38 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     }
     
+    @IBAction func talkaboutViewTapped(sender: AnyObject)
+    {
+        var newConstraint = NSLayoutConstraint(item: self.taklAboutItView, attribute: .Top, relatedBy: .Equal, toItem: self.feelingView, attribute: .Top, multiplier: 1.0, constant: 0)
+        
+                 2
+                UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut , animations: {
+                    self.feelingView.removeConstraint(self.topSpaceForTalkButtonConstraint)
+                    self.feelingView.addConstraint(newConstraint)
+                    self.feelingView.layoutIfNeeded()
+                    }, completion: nil)
+        
+                // 3
+                topSpaceForTalkButtonConstraint = newConstraint
+
+        
+    }
     //UICollectionView
     
-    @IBAction func talkAboutButtonTapped(sender: AnyObject)
-    {
-        var newConstraint = NSLayoutConstraint(item: self.talkAboutButton, attribute: .Top, relatedBy: .Equal, toItem: self.feelingView, attribute: .Top, multiplier: 1.0, constant: 0)
-        
-        // 2
-        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut , animations: {
-            self.view.removeConstraint(self.topSpaceTalkButtonConstraint)
-            self.view.addConstraint(newConstraint)
-            self.view.layoutIfNeeded()
-            }, completion: nil)
-        
-        // 3
-        topSpaceTalkButtonConstraint = newConstraint
-    }
+//    @IBAction func talkAboutViewTapped(sender: AnyObject)
+//    {
+//        var newConstraint = NSLayoutConstraint(item: self.talkAboutButton, attribute: .Top, relatedBy: .Equal, toItem: self.feelingView, attribute: .Top, multiplier: 1.0, constant: 0)
+//        
+//        // 2
+//        UIView.animateWithDuration(0.25, delay: 0.0, options: .CurveEaseOut , animations: {
+//            self.view.removeConstraint(self.topSpaceTalkButtonConstraint)
+//            self.view.addConstraint(newConstraint)
+//            self.view.layoutIfNeeded()
+//            }, completion: nil)
+//        
+//        // 3
+//        topSpaceTalkButtonConstraint = newConstraint
+//    }
     
     //MARK - collectionview
     

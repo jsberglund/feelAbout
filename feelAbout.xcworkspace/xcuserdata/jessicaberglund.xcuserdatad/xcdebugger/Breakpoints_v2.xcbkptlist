@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "feelAbout/ViewController.swift"
-            timestampString = "445328046.429248"
+            timestampString = "445390284.291579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "feelAbout/ViewController.swift"
-            timestampString = "445328046.429248"
+            timestampString = "445390284.291579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -54,47 +54,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "feelAbout/ViewController.swift"
-            timestampString = "445328046.429248"
+            timestampString = "445390278.289238"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "talkAboutButtonTapped(_:)"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "talkaboutViewTapped(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "feelAbout.ViewController.talkAboutButtonTapped (feelAbout.ViewController)(Swift.AnyObject) -&gt; ()"
-                  moduleName = "feelAbout"
-                  urlString = "file:///Users/jessicaberglund/development/feelAbout/feelAbout/ViewController.swift"
-                  timestampString = "445328046.831281"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "850">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "reabstraction thunk helper from @callee_owned () -&gt; (@unowned ()) to @callee_unowned @objc_block () -&gt; (@unowned ())"
-                  moduleName = "feelAbout"
-                  urlString = "file:///Users/jessicaberglund/development/feelAbout/feelAbout/ViewController.swift"
-                  timestampString = "445328046.831549"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
