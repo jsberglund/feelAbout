@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Parse.setApplicationId("pqb5glfhOqkE6ex2pwbXLenbrkjLTHOV23JyBWPe", clientKey: "amg1hbWsp6UDCbWbzSXNv2qb3btfwuCRpxI5n2T8")
+        Parse.setApplicationId(Secrets.parseAppKey, clientKey: Secrets.parseSecretKey)
         
 //        PFUser.enableAutomaticUser()
         

@@ -10,6 +10,7 @@
 		6426EFF81A8C2BAE0042FBB8 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426EFF71A8C2BAE0042FBB8 /* FontAwesome.swift */; };
 		6426EFF91A8C320B0042FBB8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6426EFF51A8C2B8E0042FBB8 /* FontAwesome.otf */; };
 		6426EFFB1A8C76910042FBB8 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426EFFA1A8C76910042FBB8 /* SubmitViewController.swift */; };
+		6426EFFD1A8C7BAB0042FBB8 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426EFFC1A8C7BAB0042FBB8 /* Secrets.swift */; };
 		647709881A832FBC000EE14E /* FeelingAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647709871A832FBC000EE14E /* FeelingAbout.swift */; };
 		6477098B1A847A86000EE14E /* FeelingAboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6477098A1A847A86000EE14E /* FeelingAboutCell.swift */; };
 		64F96A001A8321A50082A8A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F969FF1A8321A50082A8A9 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		6426EFF51A8C2B8E0042FBB8 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		6426EFF71A8C2BAE0042FBB8 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
 		6426EFFA1A8C76910042FBB8 /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubmitViewController.swift; path = view/SubmitViewController.swift; sourceTree = "<group>"; };
+		6426EFFC1A8C7BAB0042FBB8 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		647709871A832FBC000EE14E /* FeelingAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelingAbout.swift; path = model/FeelingAbout.swift; sourceTree = "<group>"; };
 		6477098A1A847A86000EE14E /* FeelingAboutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelingAboutCell.swift; path = view/FeelingAboutCell.swift; sourceTree = "<group>"; };
 		64BC5CAA1A8B29BF00E7BD62 /* feelAbout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "feelAbout-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				64F96A081A8321A50082A8A9 /* LaunchScreen.xib */,
 				64F969FD1A8321A50082A8A9 /* Supporting Files */,
 				64BC5CAA1A8B29BF00E7BD62 /* feelAbout-Bridging-Header.h */,
+				6426EFFC1A8C7BAB0042FBB8 /* Secrets.swift */,
 			);
 			path = feelAbout;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			files = (
 				6426EFF81A8C2BAE0042FBB8 /* FontAwesome.swift in Sources */,
 				64F96A021A8321A50082A8A9 /* ViewController.swift in Sources */,
+				6426EFFD1A8C7BAB0042FBB8 /* Secrets.swift in Sources */,
 				647709881A832FBC000EE14E /* FeelingAbout.swift in Sources */,
 				6477098B1A847A86000EE14E /* FeelingAboutCell.swift in Sources */,
 				6426EFFB1A8C76910042FBB8 /* SubmitViewController.swift in Sources */,
