@@ -207,7 +207,7 @@
         <!--Submit Feeling View Controller-->
         <scene sceneID="EfL-5x-zpM">
             <objects>
-                <viewController storyboardIdentifier="submitVC" id="GiR-K4-HiI" userLabel="Submit Feeling View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="submitVC" id="GiR-K4-HiI" userLabel="Submit Feeling View Controller" customClass="SubmitViewController" customModule="feelAbout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h68-qd-9nQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Vyh-IB-Mj4"/>
@@ -242,6 +242,9 @@
                                     <color key="titleColor" red="0.74901960779999999" green="0.7843137255" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="GiR-K4-HiI" eventType="touchUpInside" id="VLM-0x-bcv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -270,6 +273,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="MuX-gA-KFY" id="dTK-xX-klU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4k0-Ut-7VU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
