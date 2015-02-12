@@ -67,6 +67,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func talkaboutViewTapped(sender: AnyObject)
     {
+        //add subview (coule be done in beginning)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let submitVC : UIViewController = storyboard.instantiateViewControllerWithIdentifier("submitVC") as UIViewController
+//        myViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"someName"];
+        
+        self.addChildViewController(submitVC)
+        
+//        [self addChildViewController:myViewController];
+        self.taklAboutItView.addSubview(submitVC.view)
+
+        
         var newConstraint = NSLayoutConstraint(item: self.taklAboutItView, attribute: .Top, relatedBy: .Equal, toItem: self.feelingView, attribute: .Top, multiplier: 1.0, constant: 0)
         
                  2
