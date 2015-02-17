@@ -11,11 +11,41 @@ import UIKit
 class FeelingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var feelingTableView: UITableView!
-    var feelingsListArray = ["I am feeling ok about my app", "I am feeling iffy about stuffss"]
+    var feelingsListArray : [FeelingAbout] = []
+    var userSubmittedFeelingAbout : FeelingAbout?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let theFeeling = self.userSubmittedFeelingAbout {
+            theFeeling.saveInBackgroundWithBlock({ (success: Bool, error: NSError!) -> Void in
+                println("BOOYAHHHHH")
+                self.loadFeelings()
+            })
+        }
+
+    }
+    
+    func loadFeelings() {
+        var query = PFQuery(className:"FeelingAbout")
+//        query.whereKey("playerName", equalTo:"Sean Plott")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                // The find succeeded.
+                NSLog("Successfully retrieved \(objects.count) feelings.")
+                // Do something with the found objects
+//                for object in objects {
+//                    NSLog("%@", object.objectId)
+//                }
+                self.feelingsListArray = objects as [FeelingAbout]
+                self.feelingTableView.reloadData()
+            } else {
+                // Log details of the failure
+                NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
     }
     
     //UITableViewDataSource
@@ -27,7 +57,9 @@ class FeelingListViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:FeelingsTableViewCell = self.feelingTableView.dequeueReusableCellWithIdentifier("FeelingListCell") as FeelingsTableViewCell
         
-        cell.feelingLabel.text = self.feelingsListArray[indexPath.row]
+        var feeling = self.feelingsListArray[indexPath.row].feeling
+        var about = self.feelingsListArray[indexPath.row].about
+        cell.feelingLabel.text = "I am feeling \(feeling) about \(about)."
         
         return cell
     }

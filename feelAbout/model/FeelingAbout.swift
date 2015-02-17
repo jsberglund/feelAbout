@@ -18,6 +18,10 @@ public class FeelingAbout : PFObject, PFSubclassing {
         return "FeelingAbout"
     }
     
+    override init() {
+        super.init();
+    }
+    
     init(feeling : String, about : String, byUser : PFUser) {
         super.init()
         self.feeling = feeling

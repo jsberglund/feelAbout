@@ -243,8 +243,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButtonTapped:" destination="GiR-K4-HiI" eventType="touchUpInside" id="VLM-0x-bcv"/>
-                                    <segue destination="o8v-u3-ptd" kind="show" id="ym8-UV-X60"/>
+                                    <segue destination="o8v-u3-ptd" kind="show" identifier="SubmitAndLoadListSegue" id="ym8-UV-X60"/>
                                 </connections>
                             </button>
                         </subviews>

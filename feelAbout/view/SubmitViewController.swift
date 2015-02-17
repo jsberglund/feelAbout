@@ -15,12 +15,20 @@ public class SubmitViewController: UIViewController {
     
     @IBAction func submitButtonTapped(sender: AnyObject) {
         println("YESH!!!!!")
-        if let theFeeling = self.feelingAbout {
-            theFeeling.longDescription = self.descriptionTextView.text
+        
+    }
+    
+    override public func prepareForSegue(segue: UIStoryboardSegue,
+        sender: AnyObject?) {
             
-            theFeeling.saveInBackgroundWithBlock({ (success: Bool, error: NSError!) -> Void in
-                println("BOOYAHHHHH")
-            })
-        }
+            if segue.identifier == "SubmitAndLoadListSegue" {
+                let detailViewController = segue.destinationViewController
+                    as FeelingListViewController
+                
+                if let theFeeling = self.feelingAbout {
+                    theFeeling.longDescription = self.descriptionTextView.text
+                    detailViewController.userSubmittedFeelingAbout = theFeeling
+                }
+            }
     }
 }

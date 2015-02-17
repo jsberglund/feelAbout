@@ -105,6 +105,7 @@
 		647709891A847A45000EE14E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				64F96A011A8321A50082A8A9 /* ViewController.swift */,
 				6477098A1A847A86000EE14E /* FeelingAboutCell.swift */,
 				6426EFFA1A8C76910042FBB8 /* SubmitViewController.swift */,
 				6426EFFE1A8DB8F10042FBB8 /* FeelingListViewController.swift */,
@@ -141,7 +142,6 @@
 				647709891A847A45000EE14E /* view */,
 				647709861A832F96000EE14E /* model */,
 				64F969FF1A8321A50082A8A9 /* AppDelegate.swift */,
-				64F96A011A8321A50082A8A9 /* ViewController.swift */,
 				64F96A031A8321A50082A8A9 /* Main.storyboard */,
 				64F96A061A8321A50082A8A9 /* Images.xcassets */,
 				64F96A081A8321A50082A8A9 /* LaunchScreen.xib */,
